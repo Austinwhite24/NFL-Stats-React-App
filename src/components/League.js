@@ -6,7 +6,7 @@ function League() {
   const [data, setData] = useState([]);
   const [selectedYear, setSelectedYear] = useState("2021");
   const [differentStats, setDiffernetStats] = useState("win-stats");
-  const [offenseDefense, setOffenseDefense] = useState('')
+  const [offenseDefense, setOffenseDefense] = useState("");
 
   const [favTeam, setFavTeam] = useState(false);
   console.log(favTeam);
@@ -21,19 +21,16 @@ function League() {
       },
     };
     axios.request(options).then(function (response) {
-      //  console.log(response.data[15].name);
-      const reverse = response.data.reverse()
+      const reverse = response.data.reverse();
       setData(reverse);
     });
-  }, [selectedYear, differentStats,offenseDefense]);
+  }, [selectedYear, differentStats, offenseDefense]);
 
   function nameOfFunction() {
     axios
       .post("/newFavTeam", selectedYear)
       .then((response) => console.log(selectedYear))
       .catch((error) => console.log(error));
-
-    // console.log(selectedYear)
   }
 
   return (
@@ -127,7 +124,7 @@ function League() {
           onChange={(e) => setOffenseDefense(e.target.value)}
           defaultValue={offenseDefense}
         >
-        <option value=''>Offense/Defense</option>
+          <option value="">Offense/Defense</option>
           <option value="/offense">Offense Stats</option>
           <option value="/defense">Defense Stats</option>
         </select>
@@ -152,29 +149,42 @@ function League() {
               </tr>
               <tr>
                 <td className="favTD">
-                  
                   <input
-                  id="favBtn"
-                  onClick={nameOfFunction}
-                  defaultValue={favTeam}
-                  type='checkbox'
-                />
-                  </td>
+                    id="favBtn"
+                    onClick={nameOfFunction}
+                    defaultValue={favTeam}
+                    type="checkbox"
+                  />
+                </td>
                 <td className="teamCSS">{data.name}</td>
                 <td>{data.wins}</td>
                 <td>{data.losses}</td>
                 <td>{data.winRatePercentage}</td>
-                <td>{differentStats === 'receiving-stats' ? data.receives : ''}</td>
-                <td className="rec-td">{differentStats === 'receiving-stats' ? data.touchdowns : ''}</td>
-                <td className="rec-yards">{differentStats ==='receiving-stats' ? data.yards : ''}</td>
-                <td className="rush-yards">{differentStats === 'rushing-stats' ? data.yards : ''}</td>
-                <td className="rush-td">{differentStats === 'rushing-stats'? data.touchdowns : ''}</td>
-                <td className="pass-yards">{differentStats === 'passing-stats'? data.passYards : ''}</td>
-                <td className="pass-comp">{differentStats === 'passing-stats'? data.completions : ''}</td>
-                <td className="pass-td">{differentStats === 'passing-stats' ? data.touchdowns : ''}</td>
+                <td>
+                  {differentStats === "receiving-stats" ? data.receives : ""}
+                </td>
+                <td className="rec-td">
+                  {differentStats === "receiving-stats" ? data.touchdowns : ""}
+                </td>
+                <td className="rec-yards">
+                  {differentStats === "receiving-stats" ? data.yards : ""}
+                </td>
+                <td className="rush-yards">
+                  {differentStats === "rushing-stats" ? data.yards : ""}
+                </td>
+                <td className="rush-td">
+                  {differentStats === "rushing-stats" ? data.touchdowns : ""}
+                </td>
+                <td className="pass-yards">
+                  {differentStats === "passing-stats" ? data.passYards : ""}
+                </td>
+                <td className="pass-comp">
+                  {differentStats === "passing-stats" ? data.completions : ""}
+                </td>
+                <td className="pass-td">
+                  {differentStats === "passing-stats" ? data.touchdowns : ""}
+                </td>
               </tr>
-
-              
             </table>
           </div>
         ))}

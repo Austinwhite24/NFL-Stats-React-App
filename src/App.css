@@ -1,44 +1,35 @@
-/* .App {
-  text-align: center;
-} */
-
-.headerDiv{
+.headerDiv {
   background-color: black;
-  /* height: 125px; */
   height: 8%;
-  /* height: 10vh; */
-  /* max-height: 150px; */
-  /* max-height: max-content; */
   max-width: 100%
 }
+
 .title {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
   color: white;
-  /* font-family: 'Arvo', serif;
-  font-family: 'Fredoka One', cursive;
-  font-family: 'Inter', sans-serif; */
   font-family: monospace;
   font-size: 18px;
 }
 
-.favTeamsDiv{
+.favTeamsDiv {
   color: white;
   background-color: black;
- display: flex;
- justify-content: flex-end;
- align-items: center;
- margin-right: 2%;
- gap: 12px;
-/* padding-right: 10px; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 2%;
+  gap: 12px;
 }
+
 .rightLinks {
   color: white;
   font-family: monospace;
   font-size: large;
 }
+
 .nfl-logo-div {
   display: flex;
   align-items: center;
@@ -51,8 +42,8 @@
   display: flex;
   gap: 7px;
   margin-top: 0px;
-  
 }
+
 p {
   font-size: medium;
   font-family: serif;
@@ -61,22 +52,16 @@ p {
 main {
   margin-left: 6%;
 }
+
 .nflStandings {
   display: flex;
   margin-left: 6.01%;
   margin-top: 0.%;
-  /* max-width: max-content; */
-  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-
-  
-
 }
 
 .btnDivParent {
   display: flex;
   align-items: center;
-  
 }
 
 .conference {
@@ -92,52 +77,51 @@ main {
 tr:nth-child(even) {
   background-color: #ebebe7;
 }
+
 tr {
   border-bottom: 1px solid #ddd;
-  /* max-width: 100px; */
-  /* min-width: 50px; */
   margin: 0px;
 }
-table{
+
+table {
   min-width: 80px;
 }
-table, th, td{
-  /* border: 1px solid black; */
-        /* border-collapse: collapse; */
-        /* padding: 1%; */
-        /* min-width: 80px; */
-        max-width: max-content;
+
+table,
+th,
+td {
+  max-width: max-content;
 }
-th, td {
+
+th,
+td {
   padding: 0.5px;
   min-width: 88px;
 }
+
 th {
   max-height: fit-content;
-  /* min-height: 10px;
-  height: 10px; */
 }
+
 td {
   text-align: center;
-  /* max-width: 105px; */
-  /* min-width: 50px;
-  min-height: 5px;
-  max-height: 5px; */
-  /* width: 100%; */
+
 }
+
 .teamCSS {
   width: 100px;
   height: 28px;
 }
+
 .favTD {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
 }
+
 .favBtn {
   max-width: 40px;
-  /* align-items: center; */
 }
 
 
@@ -154,46 +138,37 @@ td {
 .logoutDiv {
   display: flex;
   align-items: flex-end;
-  /* justify-content: flex-end; */
-  /* margin: 5px; */
   margin-left: 20px;
   margin-top: 20px;
 }
 
 
-.loginBigDiv{
-/* background-color: aqua; */
-display: flex;
-/* flex-direction: column; */
-height: 400px;
-height: 65vh;
-align-items: center;
-justify-content: center;
-width: auto;
-margin: auto;
-}
-.loginRegisterChild{
+.loginBigDiv {
   display: flex;
-  
+  height: 400px;
+  height: 65vh;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: auto;
+}
+
+.loginRegisterChild {
+  display: flex;
   flex-direction: column;
   background-color: rgb(232, 236, 236);
   background-color: #F5F5F5;
   align-items: center;
- /* justify-items: auto; */
   height: 50vh;
   width: 40vw;
   font-family: 'Courier New', Courier, monospace;
 }
+
 input {
   display: flex;
   padding: 8px;
-  
-
-  /* gap: 20px; */
-  /* align-items: center;
-  justify-items: center;
-  justify-content: center; */
 }
+
 .loginInfo {
   display: flex;
   flex-direction: column;
@@ -205,12 +180,11 @@ input {
   margin-left: 50px;
   margin-top: 10px;
   align-self: center;
-  
+
 }
-.register{
+
+.register {
   color: black;
-  /* align-items: center;
-  align-self: center; */
   margin-top: 180px;
   margin-left: 41px;
   width: 100px;
@@ -226,17 +200,14 @@ input {
   align-items: center;
   appearance: none;
   background-color: #FCFCFD;
-  /* background-color: #F8F8F8; */
   border-radius: 4px;
   border-width: 0;
   border: 1px solid #d5d9d9;
-  /* box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset; */
   box-sizing: border-box;
-  /* box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0; */
   color: #36395A;
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
+  font-family: "JetBrains Mono", monospace;
   height: 40px;
   justify-content: center;
   line-height: 1;
@@ -247,12 +218,11 @@ input {
   position: relative;
   text-align: left;
   text-decoration: none;
-  /* transition: box-shadow .15s,transform .15s; */
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-  will-change: box-shadow,transform;
+  will-change: box-shadow, transform;
   font-size: 18px;
 }
 
@@ -274,11 +244,12 @@ input {
 /*//////// Leaue Page ////////*/
 
 
-select{
+select {
   padding: 5px;
   margin-bottom: 5px;
   align-items: center;
 }
+
 .favBtn {
   color: #0f1111;
   background-color: #0f1111;
@@ -286,17 +257,10 @@ select{
   margin-left: auto;
 }
 
-
-
-
-
-
 .secert {
   color: orange;
   background-color: orange;
 }
-
-
 
 /* CSS */
 .btnDivChild {
@@ -308,7 +272,7 @@ select{
   color: #0f1111;
   cursor: pointer;
   display: inline-block;
-  font-family: "Amazon Ember",sans-serif;
+  font-family: "Amazon Ember", sans-serif;
   font-size: 13px;
   line-height: 29px;
   padding: 0 10px 0 11px;
@@ -321,7 +285,7 @@ select{
   vertical-align: middle;
   width: 100px;
   padding: 5px;
-  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+
 }
 
 .btnDivChild:hover {

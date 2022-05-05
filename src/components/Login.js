@@ -21,9 +21,7 @@ function Login(props) {
         props.logFunction();
         navigate("/secret");
       })
-      .catch((err) => {
-        // console.log(err.response.data);
-      });
+      .catch((err) => {});
   };
   const validate = (values) => {
     const errors = {};
@@ -57,42 +55,43 @@ function Login(props) {
           <Link className="rightLinks" to="/login">
             Login
           </Link>
-          |<Link className="rightLinks" to="/home">
+          |
+          <Link className="rightLinks" to="/home">
             Home
           </Link>
         </div>
-
-
       </header>
       <div className="loginBigDiv">
         <div className="loginRegisterChild">
-        <h2>Login Page</h2>
-        <div className="loginInfo">
-
-        <form onSubmit={formik.handleSubmit}>
-          <input
-            type="text"
-            name="username"
-            onChange={formik.handleChange}
-            value={formik.values.username}
-            placeholder="Username"
-          />
-          <input
-            type="password"
-            name="password"
-            onChange={formik.handleChange}
-            value={formik.values.password}
-            placeholder="Password"
-          />
-          <button className="submitBtn" type="submit" disabled={!formik.isValid}>
-            Submit
-          </button>
-        </form>
-        <Link className="register" to="/register">
-            Register
-          </Link>
-        </div>
-
+          <h2>Login Page</h2>
+          <div className="loginInfo">
+            <form onSubmit={formik.handleSubmit}>
+              <input
+                type="text"
+                name="username"
+                onChange={formik.handleChange}
+                value={formik.values.username}
+                placeholder="Username"
+              />
+              <input
+                type="password"
+                name="password"
+                onChange={formik.handleChange}
+                value={formik.values.password}
+                placeholder="Password"
+              />
+              <button
+                className="submitBtn"
+                type="submit"
+                disabled={!formik.isValid}
+              >
+                Submit
+              </button>
+            </form>
+            <Link className="register" to="/register">
+              Register
+            </Link>
+          </div>
         </div>
       </div>
     </div>
